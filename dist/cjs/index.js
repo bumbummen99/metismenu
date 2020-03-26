@@ -1,7 +1,7 @@
 /*!
-* metismenu https://github.com/onokumus/metismenu#readme
+* @skyraptor/metismenu https://github.com/onokumus/metismenu#readme
 * A jQuery menu plugin
-* @version 3.0.6
+* @version 3.0.7
 * @author Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
 * @license: MIT 
 */
@@ -152,6 +152,10 @@ var MetisMenu = /*#__PURE__*/function () {
       var paRent = eTar.parent(conf.parentTrigger);
       var sibLi = paRent.siblings(conf.parentTrigger);
       var sibTrigger = sibLi.children(conf.triggerElement);
+
+      if (!paRent.has('ul')) {
+        return;
+      }
 
       if (paRent.hasClass(ClassName.ACTIVE)) {
         eTar.attr('aria-expanded', 'false');

@@ -97,6 +97,10 @@ class MetisMenu {
         const sibLi = paRent.siblings(conf.parentTrigger);
         const sibTrigger = sibLi.children(conf.triggerElement);
 
+        if (!paRent.has('ul')){
+          return;
+        }
+
         if (paRent.hasClass(ClassName.ACTIVE)) {
           eTar.attr('aria-expanded', 'false');
           self.removeActive(paRent);
