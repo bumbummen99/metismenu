@@ -98,6 +98,7 @@ class MetisMenu {
         const sibTrigger = sibLi.children(conf.triggerElement);
 
         if (!paRent.has('ul').length){
+          self.setActive(paRent);
           return;
         }
 
