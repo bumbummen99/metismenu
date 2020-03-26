@@ -1,7 +1,7 @@
 /*!
 * @skyraptor/metismenu https://github.com/onokumus/metismenu#readme
 * A jQuery menu plugin
-* @version 3.0.7
+* @version 3.0.8
 * @author Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
 * @license: MIT 
 */
@@ -153,7 +153,7 @@ var MetisMenu = /*#__PURE__*/function () {
       var sibLi = paRent.siblings(conf.parentTrigger);
       var sibTrigger = sibLi.children(conf.triggerElement);
 
-      if (!paRent.has('ul')) {
+      if (!paRent.has('ul').length) {
         return;
       }
 

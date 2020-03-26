@@ -97,7 +97,7 @@ class MetisMenu {
         const sibLi = paRent.siblings(conf.parentTrigger);
         const sibTrigger = sibLi.children(conf.triggerElement);
 
-        if (!paRent.has('ul')){
+        if (!paRent.has('ul').length){
           return;
         }
 
